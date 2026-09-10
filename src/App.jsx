@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Analytics } from '@vercel/analytics/react';
 const whatsappUrl =
   "https://wa.me/916230162159?text=Hi%20VELNOX%20Studio%2C%20I%20want%20to%20discuss%20a%20website%20project.";
 
@@ -145,6 +146,7 @@ function App() {
       </main>
 
       <footer className="site-footer"><div className="footer-brand"><span className="brand-mark">V</span><div><strong>VELNOX <em>STUDIO</em></strong><small>Digital experiences with a point of view.</small></div></div><div className="footer-links"><span>© 2026 VELNOX Studio</span><a href="mailto:mishraswastik1711@gmail.com">Email us <ArrowUpRight size={14} /></a><a href="#home" onClick={(e) => { e.preventDefault(); scrollTo("home"); }}>Back to top <MoveUpRight size={14} /></a></div></footer>
+      <Analytics />
     </div>
   );
 }
