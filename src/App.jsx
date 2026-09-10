@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
+const whatsappUrl =
+  "https://wa.me/916230162159?text=Hi%20VELNOX%20Studio%2C%20I%20want%20to%20discuss%20a%20website%20project.";
+
 import {
   ArrowRight,
   ArrowUpRight,
@@ -7,12 +10,14 @@ import {
   ChevronDown,
   Layers3,
   Menu,
+  MessageCircle,
   MonitorSmartphone,
   MoveUpRight,
   Send,
   ShoppingBag,
   X,
 } from "lucide-react";
+
 import "./App.css";
 
 const navItems = [
