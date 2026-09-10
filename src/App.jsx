@@ -37,8 +37,8 @@ const projects = [
 ];
 
 const plans = [
-  { name: "Launch", price: "₹24,900", description: "For a sharp, focused first impression.", features: ["One-page website", "Custom visual direction", "Responsive development", "Basic SEO setup"], featured: false },
-  { name: "Signature", price: "₹49,900", description: "For brands ready to look established.", features: ["Up to 5 strategic pages", "Premium custom design", "Conversion-focused copy structure", "Speed & SEO optimisation", "30 days support"], featured: true },
+  { name: "Launch", price: "₹12,999", description: "For a sharp, focused first impression.", features: ["One-page website", "Custom visual direction", "Responsive development", "Basic SEO setup"], featured: false },
+  { name: "Signature", price: "₹24,999", description: "For brands ready to look established.", features: ["Up to 5 strategic pages", "Premium custom design", "Conversion-focused copy structure", "Speed & SEO optimisation", "30 days support"], featured: true },
   { name: "Commerce", price: "Let's talk", description: "For stores with bigger ambitions.", features: ["Custom store experience", "Product & collection templates", "Payment setup guidance", "Analytics-ready build", "60 days support"], featured: false },
 ];
 
