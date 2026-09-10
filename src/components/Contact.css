@@ -1,0 +1,425 @@
+/* ==========================================
+   CONTACT — VELNOX STUDIO FINAL
+========================================== */
+
+.contact{
+  background:#030712;
+  padding:120px 8%;
+}
+
+/* ---------- Layout ---------- */
+
+.contact-container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:stretch;
+}
+
+/* ---------- Shared Card Style ---------- */
+
+.contact-info,
+.contact-form{
+  background:#0B1120;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  padding:32px;
+}
+
+/* ---------- Left Card ---------- */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section-tag{
+  color:#60A5FA;
+  letter-spacing:3px;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+.contact-info h2{
+  color:#FFFFFF;
+  font-size:44px;
+  line-height:1.15;
+  margin-bottom:18px;
+}
+
+.contact-text{
+  color:#94A3B8;
+  line-height:1.8;
+  margin-bottom:28px;
+}
+
+.contact-details{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:#E2E8F0;
+  font-size:15px;
+}
+
+.contact-item svg{
+  color:#60A5FA;
+}
+
+/* Push WhatsApp button to bottom */
+
+.whatsapp-section{
+  margin-top:auto;
+  padding-top:28px;
+}
+
+/* ---------- WhatsApp Button ---------- */
+
+.whatsapp-contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 56px;              /* Same height as Send Inquiry button */
+
+  margin-top: 32px;          /* Pushes it down to align */
+  padding: 0 24px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #16A34A, #22C55E);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+
+  transition: all 0.3s ease;
+}
+
+.whatsapp-contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(34, 197, 94, 0.35);
+}
+
+.whatsapp-note{
+  margin-top:12px;
+  text-align:center;
+  color:#94A3B8;
+  font-size:14px;
+}
+
+/* ---------- Right Form ---------- */
+
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  height:100%;
+}
+
+/* Inputs */
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+
+  background:#111827;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+
+  padding:16px 18px;
+
+  color:#FFFFFF;
+  font-size:15px;
+  font-family:inherit;
+
+  outline:none;
+  transition:.3s ease;
+}
+
+/* Placeholder */
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color:#94A3B8;
+  opacity:1;
+}
+
+/* Focus */
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:#3B82F6;
+  box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
+
+.contact-form textarea{
+  resize:none;
+  min-height:170px;
+}
+
+/* Submit Button */
+
+.contact-form button{
+  margin-top:auto;
+
+  height:58px;
+
+  background:linear-gradient(135deg,#2563EB,#3B82F6);
+  color:white;
+
+  border:none;
+  border-radius:16px;
+
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+
+  transition:.3s ease;
+}
+
+.contact-form button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 15px 35px rgba(37,99,235,.25);
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:900px){
+
+  .contact-container{
+    grid-template-columns:1fr;
+  }
+
+  .contact-info h2{
+    font-size:36px;
+  }
+
+  .whatsapp-contact-btn{
+    width:100%;
+  }
+
+}
+/* ==========================================
+   SUCCESS POPUP
+========================================== */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.78);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+
+  animation: fadeIn 0.35s ease;
+}
+
+.success-popup {
+  width: min(420px, 90%);
+  padding: 35px 28px;
+
+  text-align: center;
+
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 25px 60px rgba(37,99,235,.25);
+
+  animation: popupScale 0.35s ease;
+}
+
+.popup-check {
+  width: 80px;
+  height: 80px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg,#16A34A,#22C55E);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+
+  box-shadow: 0 10px 30px rgba(34,197,94,.4);
+}
+
+.success-popup h2 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.success-popup p {
+  color: #CBD5E1;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.success-popup button {
+  width: 100%;
+  padding: 14px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg,#2563EB,#60A5FA);
+
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.success-popup button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(37,99,235,.35);
+}
+
+/* Animations */
+
+@keyframes popupScale {
+  from {
+    opacity: 0;
+    transform: scale(.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* ===== Premium Success Popup ===== */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.82);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  animation: fadeIn 0.3s ease;
+}
+
+.success-popup {
+  width: min(420px, 92%);
+  padding: 36px 30px;
+  border-radius: 28px;
+  text-align: center;
+
+  background: linear-gradient(180deg, #0f172a, #020617);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+
+  box-shadow:
+    0 0 40px rgba(37, 99, 235, 0.25),
+    0 20px 60px rgba(0, 0, 0, 0.45);
+
+  animation: popupScale 0.35s ease;
+}
+
+.popup-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.check-circle {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 42px;
+  font-weight: bold;
+
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.45);
+}
+
+.popup-tag {
+  color: #60a5fa;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.success-popup h2 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.popup-text {
+  color: #cbd5e1;
+  line-height: 1.8;
+  margin-bottom: 28px;
+  font-size: 15px;
+}
+
+.popup-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.popup-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+}
+
+@keyframes popupScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,170 @@
+/* ==========================================
+   ABOUT SECTION
+========================================== */
+
+.about{
+  background:#050816;
+}
+
+.about-container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:70px;
+}
+
+.section-tag{
+  color:#60A5FA;
+  letter-spacing:3px;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+.about-left h2{
+  font-size:52px;
+  line-height:1.15;
+  margin-bottom:24px;
+}
+
+.about-left h2 span{
+  color:#3B82F6;
+}
+
+.about-text{
+  color:#94A3B8;
+  line-height:1.8;
+  margin-bottom:32px;
+}
+
+.about-list{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin-bottom:38px;
+}
+
+.about-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#E2E8F0;
+}
+
+.about-item svg{
+  color:#3B82F6;
+}
+
+/* Laptop */
+
+.about-right{
+  display:flex;
+  justify-content:center;
+}
+
+.laptop{
+  width:100%;
+  max-width:520px;
+  animation:floatLaptop 5s ease-in-out infinite;
+}
+
+.screen{
+  background:#09111F;
+  border-radius:22px 22px 14px 14px;
+  padding:18px;
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 30px 60px rgba(37,99,235,.15);
+}
+
+.browser-bar{
+  display:flex;
+  gap:6px;
+  margin-bottom:18px;
+}
+
+.browser-bar span{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:rgba(255,255,255,.25);
+}
+
+.ui-header{
+  width:70%;
+  height:16px;
+  border-radius:20px;
+  background:linear-gradient(90deg,#2563EB,#60A5FA);
+  margin-bottom:12px;
+}
+
+.ui-sub{
+  width:45%;
+  height:10px;
+  border-radius:20px;
+  background:#1E293B;
+  margin-bottom:24px;
+}
+
+.ui-card.large{
+  width:100%;
+  height:90px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#2563EB,#60A5FA);
+  margin-bottom:18px;
+}
+
+.ui-row{
+  display:flex;
+  gap:14px;
+  margin-bottom:18px;
+}
+
+.ui-card{
+  flex:1;
+  height:60px;
+  border-radius:14px;
+  background:#162032;
+}
+
+.ui-footer{
+  width:100%;
+  height:12px;
+  border-radius:20px;
+  background:#1E293B;
+}
+
+.laptop-base{
+  width:108%;
+  height:18px;
+  margin-left:-4%;
+  background:#1E293B;
+  border-radius:0 0 40px 40px;
+}
+
+@keyframes floatLaptop{
+  50%{
+    transform:translateY(-10px);
+  }
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+  .about-container{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .about-left h2{
+    font-size:40px;
+  }
+
+  .about-list{
+    grid-template-columns:1fr;
+  }
+
+  .about-item{
+    justify-content:center;
+  }
+}

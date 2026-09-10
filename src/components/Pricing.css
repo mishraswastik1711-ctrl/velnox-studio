@@ -1,0 +1,182 @@
+/* =====================================
+   PRICING SECTION — VELNOX STUDIO
+===================================== */
+
+.pricing {
+  background: #030712;
+  padding: 120px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-heading p {
+  color: #60A5FA;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-heading h2 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.section-heading span {
+  color: #94A3B8;
+  font-size: 16px;
+}
+
+/* Grid */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+
+.pricing-card {
+  position: relative;
+  background: #0B1120;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 24px;
+  padding: 36px 28px;
+  transition: all .35s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(96,165,250,.35);
+  box-shadow: 0 20px 40px rgba(37,99,235,.15);
+}
+
+/* Popular */
+
+.popular {
+  border: 2px solid #2563EB;
+  background: linear-gradient(
+    180deg,
+    rgba(37,99,235,.12),
+    #0B1120 35%
+  );
+  transform: scale(1.04);
+}
+
+.popular-tag {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2563EB;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 999px;
+  letter-spacing: 2px;
+}
+
+/* Text */
+
+.pricing-card h3 {
+  color: white;
+  font-size: 24px;
+}
+
+.price {
+  color: #60A5FA;
+  font-size: 46px;
+  font-weight: 700;
+  margin: 22px 0 30px;
+}
+
+/* Features */
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 34px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature svg {
+  color: #3B82F6;
+}
+
+.feature span {
+  color: #CBD5E1;
+  font-size: 15px;
+}
+
+/* Button */
+
+.pricing-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background: #111827;
+  padding: 15px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.popular .pricing-btn {
+  background: linear-gradient(135deg,#2563EB,#3B82F6);
+}
+
+.pricing-btn:hover {
+  background: #2563EB;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .popular {
+    transform: scale(1);
+  }
+
+  .section-heading h2 {
+    font-size: 36px;
+  }
+}
+/* ===== Premium Glass Effect ===== */
+
+.service-card,
+.portfolio-card,
+.pricing-card {
+  backdrop-filter: blur(18px);
+  background: rgba(11, 17, 32, 0.7);
+  transition: all 0.35s ease;
+}
+
+.service-card:hover,
+.portfolio-card:hover,
+.pricing-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  border-color: rgba(96, 165, 250, 0.4);
+  box-shadow: 0 25px 50px rgba(37, 99, 235, 0.2);
+}
